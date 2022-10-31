@@ -182,7 +182,9 @@ export default {
       input[type="text"] {
         font-weight: 200;
         width: 100%;
-        padding: 0.25em;
+        padding: 0.25em 0.5em;
+        border: solid 0.5px #222;
+        border-radius: 6px;
       }
       select {
         font-weight: 300;
