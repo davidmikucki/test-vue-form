@@ -23,7 +23,7 @@ export default {
     badgerEm() {
       let string = "Your form data! \n";
       this.badgerFormFields.forEach((element) => {
-        string += element.id + ": " + element.value + "\n";
+        string += element.variableName + ": " + element.value + "\n";
       });
       alert(string)
       //alert(string);
@@ -35,8 +35,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "senderName",
-          variableName: "senderNameValue",
+          variableName: "senderName",
           title: "Your Full Name",
           placeholder: "ex. John Doe",
           required: true,
@@ -44,8 +43,7 @@ export default {
         {
           type: "select",
           value: '',
-          id: "badgerCount",
-          variableName: "badgerCountValue",
+          variableName: "badgerCount",
           title: "Number of Badgers",
           options: [
             {
@@ -85,8 +83,7 @@ export default {
         },
         {
           type: "radioButtons",
-          id: "hungriness",
-          variableName: "hungrinessValue",
+          variableName: "hungriness",
           title: "How Hungry Should the Badgers Be?",
           required: true,
           value: "",
@@ -98,8 +95,7 @@ export default {
         },
         {
           type: "checkboxes",
-          id: "otherShippables",
-          variableName: "otherShippablesValue",
+          variableName: "otherShippables",
           title: "What Else Should We Include?",
           required: false,
           value: [],
@@ -112,8 +108,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "recipientName",
-          variableName: "recipientNameValue",
+          variableName: "recipientName",
           title: "Victim Full Name",
           placeholder: "ex. James McBadgered",
           required: true,
@@ -121,8 +116,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "street1",
-          variableName: "street1Value",
+          variableName: "street1",
           title: "Street",
           placeholder: "ex. 1234 Badger Lane",
           required: true,
@@ -130,8 +124,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "street2",
-          variableName: "street2Value",
+          variableName: "street2",
           title: "Street 2",
           placeholder: "ex. Apt. D",
           required: false,
@@ -139,8 +132,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "city",
-          variableName: "cityValue",
+          variableName: "city",
           title: "City",
           placeholder: "ex. New Badger City",
           required: true,
@@ -148,8 +140,7 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "state",
-          variableName: "stateValue",
+          variableName: "state",
           title: "State",
           placeholder: "ex. Pennsylvania",
           required: true,
@@ -157,7 +148,6 @@ export default {
         {
           type: "textInput",
           value: "",
-          id: "zipcode",
           variableName: "zipcode",
           title: "Zip Code",
           placeholder: "ex. 19019",

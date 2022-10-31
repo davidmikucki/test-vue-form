@@ -17,22 +17,24 @@
         v-for="(field, i) in fields"
         :key="i"
       >
-        <label class="wholeField" :for="field.id">{{ field.title }}</label>
+        <label class="wholeField" :for="field.variableName">{{ field.title }}</label>
         <input
           type="text"
           v-if="field.type == 'textInput'"
-          :id="field.id"
-          :ref="field.id"
+          :ref="field.variableName"
           v-model="field.value"
           :required="field.required"
           :placeholder="field.placeholder"
+          :name="field.variableName"
+          :id="field.variableName"
         />
         <select
           v-else-if="field.type == 'select'"
-          :id="field.id"
           :ref="field.id"
           v-model="field.value"
           :required="field.required"
+          :name="field.variableName"
+          :id="field.variableName"
         >
           <option
             v-for="option in field.options"
@@ -51,12 +53,12 @@
           >
             <input
               type="radio"
-              :id="button.name"
               :ref="button.name"
               :required="button.required"
               :name="field.variableName"
               v-model="field.value"
               :value="button.name"
+              :id="button.name"
             />
             <label class="radioLabel" :for="button.name">{{
               button.title
@@ -71,12 +73,12 @@
           >
             <input
               type="checkbox"
-              :id="button.name"
               :ref="button.name"
               :required="button.required"
               :name="field.variableName"
               v-model="field.value"
               :value="button.name"
+              :id="button.name"
             />
             <label class="checkboxLabel" :for="button.name">{{
               button.title
